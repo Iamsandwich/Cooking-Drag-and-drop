@@ -12,9 +12,28 @@
 background-color: papayawhip;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 155, 213); 
+  border-radius: 10px;
+}
+
+
+
 #mydiv {
   position: absolute;
-  left: 800px;
+  left: 2350px;
   z-index: 9;
   text-align: center;
 }
@@ -471,16 +490,55 @@ background-color: papayawhip;
   text-align: center;
 }
 
+#mydiv58{
+  position: absolute;
+  top: 810px;
+  left: 310px;
+  z-index: 13;
+  text-align: center;
+}
+
+#mydiv59{
+  position: absolute;
+  top: 810px;
+  left: 460px;
+  z-index: 13;
+  text-align: center;
+}
+
+#mydiv60{
+  position: absolute;
+  top: 315px;
+  left: 600px;
+  z-index: 13;
+  text-align: center;
+}
+
+#mydiv61{
+  position: absolute;
+  top: 475px;
+  left: 597px;
+  z-index: 13;
+  text-align: center;
+}
+
 #header {
   text-align: center;
   text-transform: uppercase;
   color: hotpink;
+  background-color: white;
+  border-radius: 40px;
 }
 
 #subtext {
   text-align: center;
   color: coral;
 }
+
+
+
+
+
 
 
 
@@ -726,6 +784,22 @@ background-color: papayawhip;
 <img src="Items/icecream/icecream_cone_flatbottom_chocolate_sprinkles.png" alt="flat bottom chocolate sprinkled icecream cone">
 </div>
 
+<div id="mydiv58">
+<img src="Items/icecream/icecream_decoration_mandms.png" alt="mandms">
+</div>
+
+<div id="mydiv59">
+<img src="Items/icecream/icecream_decoration_chocotones.png" alt="dualtone mandms">
+</div>
+
+<div id="mydiv60">
+<img src="Items/icecream/icecream_decoration_rainbowsprinkles.png" alt="rainbow sprinkles!">
+</div>
+
+<div id="mydiv61">
+<img src="Items/icecream/icecream_decoration_pinkprinkles.png" alt="pink sprinkles">
+</div>
+
 <script>
 //Make the DIV element draggagle:
 dragElement(document.getElementById("mydiv"));
@@ -786,6 +860,10 @@ dragElement(document.getElementById("mydiv54"));
 dragElement(document.getElementById("mydiv55"));
 dragElement(document.getElementById("mydiv56"));
 dragElement(document.getElementById("mydiv57"));
+dragElement(document.getElementById("mydiv58"));
+dragElement(document.getElementById("mydiv59"));
+dragElement(document.getElementById("mydiv60"));
+dragElement(document.getElementById("mydiv61"));
 
 
 
