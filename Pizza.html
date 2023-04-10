@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pizza!</title>
+  <link rel="icon" type="image/x-icon" href="/Items/Pizza/pizza_toppings_pepperoni_1.png">
+</head>
+
+<style>
+
+#body{
+background-color: rgb(200, 139, 112);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 146, 79); 
+  border-radius: 10px;
+}
+
+
+/*Pizza slice*/
+#mydiv {
+  position: absolute;
+  left: 10px;
+  top: 180px;
+  z-index: -1;
+  text-align: center;
+}
+
+/*Pizza slice*/
+#mydiv1 {
+  position: absolute;
+  left: 390px;
+  top: 180px;
+  z-index: -1;
+  text-align: center;
+}
+
+/*cheese*/
+#mydiv2 {
+  position: absolute;
+  left: 200px;
+  top: 590px;
+  z-index: 0;
+  text-align: center;
+}
+
+/*cheese*/
+#mydiv3 {
+  position: absolute;
+  left: 350px;
+  top: 500px;
+  z-index: 0;
+  text-align: center;
+}
+
+/*pepperoni*/
+#mydiv4 {
+  position: absolute;
+  left: 0px;
+  top: 760px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni*/
+#mydiv5 {
+  position: absolute;
+  left: 0px;
+  top: 780px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni*/
+#mydiv6 {
+  position: absolute;
+  left: 0px;
+  top: 800px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni*/
+#mydiv7 {
+  position: absolute;
+  left: 0px;
+  top: 820px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni*/
+#mydiv8 {
+  position: absolute;
+  left: 0px;
+  top: 840px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni2*/
+#mydiv9 {
+  position: absolute;
+  left: 0px;
+  top: 860px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni2*/
+#mydiv10 {
+  position: absolute;
+  left: 130px;
+  top: 780px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni2*/
+#mydiv11 {
+  position: absolute;
+  left: 130px;
+  top: 800px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni2*/
+#mydiv12 {
+  position: absolute;
+  left: 130px;
+  top: 820px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni2*/
+#mydiv13 {
+  position: absolute;
+  left: 130px;
+  top: 840px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni2*/
+#mydiv14 {
+  position: absolute;
+  left: 130px;
+  top: 860px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni2*/
+#mydiv15 {
+  position: absolute;
+  left: 130px;
+  top: 880px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni3*/
+#mydiv16 {
+  position: absolute;
+  left:10px;
+  top: 450px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni3*/
+#mydiv17 {
+  position: absolute;
+  left:10px;
+  top: 470px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni3*/
+#mydiv18 {
+  position: absolute;
+  left:10px;
+  top: 490px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni3*/
+#mydiv19 {
+  position: absolute;
+  left:10px;
+  top: 510px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni3*/
+#mydiv20 {
+  position: absolute;
+  left:10px;
+  top: 530px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*pepperoni3*/
+#mydiv21 {
+  position: absolute;
+  left:10px;
+  top: 550px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham*/
+#mydiv22 {
+  position: absolute;
+  left:140px;
+  top: 480px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham*/
+#mydiv23 {
+  position: absolute;
+  left:140px;
+  top: 500px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham*/
+#mydiv24 {
+  position: absolute;
+  left:140px;
+  top: 520px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham*/
+#mydiv25 {
+  position: absolute;
+  left:140px;
+  top: 540px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham2*/
+#mydiv26 {
+  position: absolute;
+  left:140px;
+  top: 620px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham2*/
+#mydiv27 {
+  position: absolute;
+  left:140px;
+  top: 640px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham2*/
+#mydiv28 {
+  position: absolute;
+  left:140px;
+  top: 660px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham2*/
+#mydiv29 {
+  position: absolute;
+  left:140px;
+  top: 680px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham3*/
+#mydiv30 {
+  position: absolute;
+  left:10px;
+  top: 640px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham3*/
+#mydiv31 {
+  position: absolute;
+  left:10px;
+  top: 660px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham3*/
+#mydiv32 {
+  position: absolute;
+  left:10px;
+  top: 680px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham3*/
+#mydiv33 {
+  position: absolute;
+  left:10px;
+  top: 700px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham4*/
+#mydiv34 {
+  position: absolute;
+  left: 220px;
+  top: 500px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham4*/
+#mydiv35 {
+  position: absolute;
+  left: 220px;
+  top: 520px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham4*/
+#mydiv36 {
+  position: absolute;
+  left: 220px;
+  top: 540px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*ham4*/
+#mydiv37 {
+  position: absolute;
+  left: 220px;
+  top: 560px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon*/
+#mydiv38 {
+  position: absolute;
+  left: 10px;
+  top: 960px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon*/
+#mydiv39 {
+  position: absolute;
+  left: 10px;
+  top: 1000px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon*/
+#mydiv40 {
+  position: absolute;
+  left: 10px;
+  top: 1040px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon*/
+#mydiv41 {
+  position: absolute;
+  left: 10px;
+  top: 1080px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon*/
+#mydiv42 {
+  position: absolute;
+  left: 10px;
+  top: 1120px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon2*/
+#mydiv43 {
+  position: absolute;
+  left: 170px;
+  top: 970px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon2*/
+#mydiv44 {
+  position: absolute;
+  left: 170px;
+  top: 1010px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon2*/
+#mydiv45 {
+  position: absolute;
+  left: 170px;
+  top: 1050px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon2*/
+#mydiv46 {
+  position: absolute;
+  left: 170px;
+  top: 1090px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon2*/
+#mydiv47 {
+  position: absolute;
+  left: 170px;
+  top: 1130px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon3*/
+#mydiv48 {
+  position: absolute;
+  left: 302px;
+  top: 980px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon3*/
+#mydiv49 {
+  position: absolute;
+  left: 302px;
+  top: 1020px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon3*/
+#mydiv50 {
+  position: absolute;
+  left: 302px;
+  top: 1060px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon3*/
+#mydiv51 {
+  position: absolute;
+  left: 302px;
+  top: 1100px;
+  z-index: 1;
+  text-align: center;
+}
+
+/*bacon3*/
+#mydiv52 {
+  position: absolute;
+  left: 3040px;
+  z-index: 1;
+  text-align: center;
+}
+
+#header {
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(72, 31, 31);
+  background-color:  rgb(239, 225, 195);
+  border-radius: 40px;
+}
+
+#subtext {
+  text-align: center;
+  color: rgb(67, 29, 15);
+}
+
+#icecreambutton {
+text-align: center;
+width: 20vw;
+border-radius: 100px;
+background-color: rgb(239, 225, 195);
+top: 70px;
+font-size: 22px;
+position: absolute;
+}
+
+#icecreambutton:hover {
+background-color: rgb(255, 163, 227);
+color: white;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(177, 24, 144);
+}
+
+
+
+</style>
+<body id="body">
+
+
+
+<h1 id="header">Decorate the delicious food!</h1>
+
+<p id="subtext">Click and drag on the items to arrange amazing pizzas!</p>
+
+<div id="icecreamtime">
+    <a href=index.html><h1 id="icecreambutton">Click here to make IceCream!</h1></a>
+  </div>
+
+<div id="mydiv">
+<img src="Items/Pizza/pizza_slice_empty.png" alt="an empty pizza slice">
+</div>
+
+<div id="mydiv1">
+<img src="Items/Pizza/pizza_slice_cheesy.png" alt="a cheesy pizza slice">
+</div>
+
+<div id="mydiv2">
+<img src="Items/Pizza/pizza_cheese_simple.png" alt="simple pizza cheese">
+</div>
+
+<div id="mydiv3">
+<img src="Items/Pizza/pizza_cheese_chedder.png" alt="chedder pizza cheese">
+</div>
+
+<div id="mydiv4">
+<img src="Items/Pizza/pizza_toppings_pepperoni_1.png" alt="pepperoni slice V1 1">
+</div>
+
+<div id="mydiv5">
+<img src="Items/Pizza/pizza_toppings_pepperoni_1.png" alt="pepperoni slice V1 2">
+</div>
+
+<div id="mydiv6">
+<img src="Items/Pizza/pizza_toppings_pepperoni_1.png" alt="pepperoni slice V1 3">
+</div>
+
+<div id="mydiv7">
+<img src="Items/Pizza/pizza_toppings_pepperoni_1.png" alt="pepperoni slice V1 4">
+</div>
+
+<div id="mydiv8">
+<img src="Items/Pizza/pizza_toppings_pepperoni_1.png" alt="pepperoni slice V1 5">
+</div>
+
+<div id="mydiv9">
+<img src="Items/Pizza/pizza_toppings_pepperoni_1.png" alt="pepperoni slice V1 6">
+</div>
+
+<div id="mydiv10">
+<img src="Items/Pizza/pizza_toppings_pepperoni_2.png" alt="pepperoni slice V2 1">
+</div>
+
+<div id="mydiv11">
+<img src="Items/Pizza/pizza_toppings_pepperoni_2.png" alt="pepperoni slice V2 2">
+</div>
+
+<div id="mydiv12">
+<img src="Items/Pizza/pizza_toppings_pepperoni_2.png" alt="pepperoni slice V2 3">
+</div>
+
+<div id="mydiv13">
+<img src="Items/Pizza/pizza_toppings_pepperoni_2.png" alt="pepperoni slice V2 4">
+</div>
+
+<div id="mydiv14">
+<img src="Items/Pizza/pizza_toppings_pepperoni_2.png" alt="pepperoni slice V2 5">
+</div>
+
+<div id="mydiv15">
+<img src="Items/Pizza/pizza_toppings_pepperoni_2.png" alt="pepperoni slice V2 6">
+</div>
+
+<div id="mydiv16">
+<img src="Items/Pizza/pizza_toppings_pepperoni_3.png" alt="pepperoni slice V3 1">
+</div>
+
+<div id="mydiv17">
+<img src="Items/Pizza/pizza_toppings_pepperoni_3.png" alt="pepperoni slice V3 2">
+</div>
+
+<div id="mydiv18">
+<img src="Items/Pizza/pizza_toppings_pepperoni_3.png" alt="pepperoni slice V3 3">
+</div>
+
+<div id="mydiv19">
+<img src="Items/Pizza/pizza_toppings_pepperoni_3.png" alt="pepperoni slice V3 4">
+</div>
+
+<div id="mydiv20">
+<img src="Items/Pizza/pizza_toppings_pepperoni_3.png" alt="pepperoni slice V3 5">
+</div>
+    
+<div id="mydiv21">
+<img src="Items/Pizza/pizza_toppings_pepperoni_3.png" alt="pepperoni slice V3 6">
+</div>
+
+<div id="mydiv22">
+<img src="Items/Pizza/pizza_toppings_ham_1.png" alt="pepperoni slice V1 1">
+</div>
+
+<div id="mydiv23">
+<img src="Items/Pizza/pizza_toppings_ham_1.png" alt="pepperoni slice V1 2">
+</div>
+
+<div id="mydiv24">
+<img src="Items/Pizza/pizza_toppings_ham_1.png" alt="pepperoni slice V1 3">
+</div>
+
+<div id="mydiv25">
+<img src="Items/Pizza/pizza_toppings_ham_1.png" alt="pepperoni slice V1 4">
+</div>
+
+<div id="mydiv26">
+<img src="Items/Pizza/pizza_toppings_ham_2.png" alt="pepperoni slice V2 1">
+</div>
+
+<div id="mydiv27">
+<img src="Items/Pizza/pizza_toppings_ham_2.png" alt="pepperoni slice V2 2">
+</div>
+
+<div id="mydiv28">
+<img src="Items/Pizza/pizza_toppings_ham_2.png" alt="pepperoni slice V2 3">
+</div>
+
+<div id="mydiv29">
+<img src="Items/Pizza/pizza_toppings_ham_2.png" alt="pepperoni slice V2 4">
+</div>
+
+<div id="mydiv30">
+<img src="Items/Pizza/pizza_toppings_ham_3.png" alt="pepperoni slice V3 1">
+</div>
+
+<div id="mydiv31">
+<img src="Items/Pizza/pizza_toppings_ham_3.png" alt="pepperoni slice V3 2">
+</div>
+
+<div id="mydiv32">
+<img src="Items/Pizza/pizza_toppings_ham_3.png" alt="pepperoni slice V3 3">
+</div>
+
+<div id="mydiv33">
+<img src="Items/Pizza/pizza_toppings_ham_3.png" alt="pepperoni slice V3 4">
+</div>
+
+<div id="mydiv34">
+<img src="Items/Pizza/pizza_toppings_ham_4.png" alt="pepperoni slice V4 1">
+</div>
+
+<div id="mydiv35">
+<img src="Items/Pizza/pizza_toppings_ham_4.png" alt="pepperoni slice V4 2">
+</div>
+
+<div id="mydiv36">
+<img src="Items/Pizza/pizza_toppings_ham_4.png" alt="pepperoni slice V4 3">
+</div>
+
+<div id="mydiv37">
+<img src="Items/Pizza/pizza_toppings_ham_4.png" alt="pepperoni slice V4 4">
+</div>
+
+<div id="mydiv38">
+<img src="Items/Pizza/pizza_toppings_bacon_1.png" alt="bacon V1 1">
+</div>
+
+<div id="mydiv39">
+<img src="Items/Pizza/pizza_toppings_bacon_1.png" alt="bacon V1 2">
+</div>
+
+<div id="mydiv40">
+<img src="Items/Pizza/pizza_toppings_bacon_1.png" alt="bacon V1 3">
+</div>
+
+<div id="mydiv41">
+<img src="Items/Pizza/pizza_toppings_bacon_1.png" alt="bacon V1 4">
+</div>
+
+<div id="mydiv42">
+<img src="Items/Pizza/pizza_toppings_bacon_1.png" alt="bacon V1 5">
+</div>
+
+<div id="mydiv43">
+<img src="Items/Pizza/pizza_toppings_bacon_2.png" alt="bacon V2 1">
+</div>
+
+<div id="mydiv44">
+<img src="Items/Pizza/pizza_toppings_bacon_2.png" alt="bacon V2 2">
+</div>
+
+<div id="mydiv45">
+<img src="Items/Pizza/pizza_toppings_bacon_2.png" alt="bacon V2 3">
+</div>
+
+<div id="mydiv46">
+<img src="Items/Pizza/pizza_toppings_bacon_2.png" alt="bacon V2 4">
+</div>
+
+<div id="mydiv47">
+<img src="Items/Pizza/pizza_toppings_bacon_2.png" alt="bacon V2 5">
+</div>
+
+<div id="mydiv48">
+<img src="Items/Pizza/pizza_toppings_bacon_3.png" alt="bacon V3 1">
+</div>
+
+<div id="mydiv49">
+<img src="Items/Pizza/pizza_toppings_bacon_3.png" alt="bacon V3 2">
+</div>
+
+<div id="mydiv50">
+<img src="Items/Pizza/pizza_toppings_bacon_3.png" alt="bacon V3 3">
+</div>
+
+<div id="mydiv51">
+<img src="Items/Pizza/pizza_toppings_bacon_3.png" alt="bacon V3 4">
+</div>
+
+<div id="mydiv52">
+<img src="Items/Pizza/pizza_toppings_bacon_3.png" alt="bacon V3 5">
+</div>
+
+
+
+<script>
+    //Make the DIV element draggagle:
+    dragElement(document.getElementById("mydiv"));
+dragElement(document.getElementById("mydiv1"));
+dragElement(document.getElementById("mydiv2"));
+dragElement(document.getElementById("mydiv3"));
+dragElement(document.getElementById("mydiv4"));
+dragElement(document.getElementById("mydiv5"));
+dragElement(document.getElementById("mydiv6"));
+dragElement(document.getElementById("mydiv7"));
+dragElement(document.getElementById("mydiv8"));
+dragElement(document.getElementById("mydiv9"));
+dragElement(document.getElementById("mydiv10"));
+dragElement(document.getElementById("mydiv11"));
+dragElement(document.getElementById("mydiv12"));
+dragElement(document.getElementById("mydiv13"));
+dragElement(document.getElementById("mydiv14"));
+dragElement(document.getElementById("mydiv15"));
+dragElement(document.getElementById("mydiv16"));
+dragElement(document.getElementById("mydiv17"));
+dragElement(document.getElementById("mydiv18"));
+dragElement(document.getElementById("mydiv19"));
+dragElement(document.getElementById("mydiv20"));
+dragElement(document.getElementById("mydiv21"));
+dragElement(document.getElementById("mydiv22"));
+dragElement(document.getElementById("mydiv23"));
+dragElement(document.getElementById("mydiv24"));
+dragElement(document.getElementById("mydiv25"));
+dragElement(document.getElementById("mydiv26"));
+dragElement(document.getElementById("mydiv27"));
+dragElement(document.getElementById("mydiv28"));
+dragElement(document.getElementById("mydiv29"));
+dragElement(document.getElementById("mydiv30"));
+dragElement(document.getElementById("mydiv31"));
+dragElement(document.getElementById("mydiv32"));
+dragElement(document.getElementById("mydiv33"));
+dragElement(document.getElementById("mydiv34"));
+dragElement(document.getElementById("mydiv35"));
+dragElement(document.getElementById("mydiv36"));
+dragElement(document.getElementById("mydiv37"));
+dragElement(document.getElementById("mydiv38"));
+dragElement(document.getElementById("mydiv39"));
+dragElement(document.getElementById("mydiv40"));
+dragElement(document.getElementById("mydiv41"));
+dragElement(document.getElementById("mydiv42"));
+dragElement(document.getElementById("mydiv43"));
+dragElement(document.getElementById("mydiv44"));
+dragElement(document.getElementById("mydiv45"));
+dragElement(document.getElementById("mydiv46"));
+dragElement(document.getElementById("mydiv47"));
+dragElement(document.getElementById("mydiv48"));
+dragElement(document.getElementById("mydiv49"));
+dragElement(document.getElementById("mydiv50"));
+dragElement(document.getElementById("mydiv51"));
+dragElement(document.getElementById("mydiv52"));
+dragElement(document.getElementById("mydiv53"));
+dragElement(document.getElementById("mydiv54"));
+dragElement(document.getElementById("mydiv55"));
+dragElement(document.getElementById("mydiv56"));
+dragElement(document.getElementById("mydiv57"));
+dragElement(document.getElementById("mydiv58"));
+dragElement(document.getElementById("mydiv59"));
+dragElement(document.getElementById("mydiv60"));
+dragElement(document.getElementById("mydiv61"));
+dragElement(document.getElementById("mydiv62"));
+dragElement(document.getElementById("mydiv63"));
+dragElement(document.getElementById("mydiv64"));
+dragElement(document.getElementById("mydiv65"));
+dragElement(document.getElementById("mydiv66"));
+dragElement(document.getElementById("mydiv67"));
+dragElement(document.getElementById("mydiv68"));
+dragElement(document.getElementById("mydiv69"));
+dragElement(document.getElementById("mydiv70"));
+dragElement(document.getElementById("mydiv71"));
+dragElement(document.getElementById("mydiv72"));
+dragElement(document.getElementById("mydiv73"));
+dragElement(document.getElementById("mydiv74"));
+dragElement(document.getElementById("mydiv75"));
+dragElement(document.getElementById("mydiv76"));
+dragElement(document.getElementById("mydiv77"));
+dragElement(document.getElementById("mydiv78"));
+dragElement(document.getElementById("mydiv79"));
+dragElement(document.getElementById("mydiv80"));
+dragElement(document.getElementById("mydiv81"));
+dragElement(document.getElementById("mydiv82"));
+dragElement(document.getElementById("mydiv83"));
+dragElement(document.getElementById("mydiv84"));
+dragElement(document.getElementById("mydiv85"));
+dragElement(document.getElementById("mydiv86"));
+dragElement(document.getElementById("mydiv87"));
+dragElement(document.getElementById("mydiv88"));
+dragElement(document.getElementById("mydiv89"));
+dragElement(document.getElementById("mydiv90"));
+dragElement(document.getElementById("mydiv91"));
+dragElement(document.getElementById("mydiv92"));
+dragElement(document.getElementById("mydiv93"));
+dragElement(document.getElementById("mydiv94"));
+dragElement(document.getElementById("mydiv95"));
+dragElement(document.getElementById("mydiv96"));
+dragElement(document.getElementById("mydiv97"));
+dragElement(document.getElementById("mydiv98"));
+dragElement(document.getElementById("mydiv99"));
+dragElement(document.getElementById("mydiv100"));
+dragElement(document.getElementById("mydiv101"));
+dragElement(document.getElementById("mydiv102"));
+dragElement(document.getElementById("mydiv103"));
+dragElement(document.getElementById("mydiv104"));
+dragElement(document.getElementById("mydiv105"));
+dragElement(document.getElementById("mydiv106"));
+dragElement(document.getElementById("mydiv107"));
+dragElement(document.getElementById("mydiv108"));
+dragElement(document.getElementById("mydiv109"));
+dragElement(document.getElementById("mydiv110"));
+dragElement(document.getElementById("mydiv111"));
+dragElement(document.getElementById("mydiv112"));
+dragElement(document.getElementById("mydiv113"));
+dragElement(document.getElementById("mydiv114"));
+dragElement(document.getElementById("mydiv115"));
+dragElement(document.getElementById("mydiv116"));
+dragElement(document.getElementById("mydiv117"));
+dragElement(document.getElementById("mydiv118"));
+dragElement(document.getElementById("mydiv119"));
+dragElement(document.getElementById("mydiv120"));
+dragElement(document.getElementById("mydiv121"));
+dragElement(document.getElementById("mydiv122"));
+dragElement(document.getElementById("mydiv123"));
+dragElement(document.getElementById("mydiv124"));
+dragElement(document.getElementById("mydiv125"));
+dragElement(document.getElementById("mydiv126"));
+dragElement(document.getElementById("mydiv127"));
+dragElement(document.getElementById("mydiv128"));
+dragElement(document.getElementById("mydiv129"));
+dragElement(document.getElementById("mydiv130"));
+dragElement(document.getElementById("mydiv131"));
+dragElement(document.getElementById("mydiv132"));
+dragElement(document.getElementById("mydiv133"));
+dragElement(document.getElementById("mydiv134"));
+dragElement(document.getElementById("mydiv135"));
+dragElement(document.getElementById("mydiv136"));
+dragElement(document.getElementById("mydiv137"));
+dragElement(document.getElementById("mydiv138"));
+dragElement(document.getElementById("mydiv139"));
+dragElement(document.getElementById("mydiv140"));
+
+    
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "mydiv")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "mydiv").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
+
+</script>
+
+</body>
+</html>
