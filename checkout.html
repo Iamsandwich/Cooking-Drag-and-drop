@@ -246,31 +246,31 @@ form .display input{
     <div id="display" class="display">
         <input type="text" name="display">
     </div>
-    <img src="Items/Checkout/button_small_7.png" alt="small button 7" input type="button" value="7" onclick="display.value += '7' " id="button7" onclick="playAudio('Items/Checkout/unicompclassic.ogg')">
-    <img src="Items/Checkout/button_small_8.png" alt="small button 8" input type="button" value="8" onclick="display.value += '8' " id="button8">
-    <img src="Items/Checkout/button_small_9.png" alt="small button 9" input type="button" value="9" onclick="display.value += '9' " id="button9">
+    <img src="Items/Checkout/button_small_7.png" alt="small button 7" input type="button" value="7" onclick="display.value += '7', KeyPress1() " id="button7">
+    <img src="Items/Checkout/button_small_8.png" alt="small button 8" input type="button" value="8" onclick="display.value += '8', KeyPress2()  " id="button8">
+    <img src="Items/Checkout/button_small_9.png" alt="small button 9" input type="button" value="9" onclick="display.value += '9', KeyPress3()  " id="button9">
 
-    <img src="Items/Checkout/button_small_4.png" alt="small button 4" input type="button" value="4" onclick="display.value += '4' " id="button4">    
-    <img src="Items/Checkout/button_small_5.png" alt="small button 5" input type="button" value="5" onclick="display.value += '5' " id="button5">
-    <img src="Items/Checkout/button_small_6.png" alt="small button 6" input type="button" value="6" onclick="display.value += '6' " id="button6">
+    <img src="Items/Checkout/button_small_4.png" alt="small button 4" input type="button" value="4" onclick="display.value += '4', KeyPress4()  " id="button4">    
+    <img src="Items/Checkout/button_small_5.png" alt="small button 5" input type="button" value="5" onclick="display.value += '5', KeyPress5()  " id="button5">
+    <img src="Items/Checkout/button_small_6.png" alt="small button 6" input type="button" value="6" onclick="display.value += '6', KeyPress6()  " id="button6">
 
-    <img src="Items/Checkout/button_small_1.png" alt="small button 1" input type="button" value="1" onclick="display.value += '1' " id="button1">    
-    <img src="Items/Checkout/button_small_2.png" alt="small button 2" input type="button" value="2" onclick="display.value += '2' " id="button2">
-    <img src="Items/Checkout/button_small_3.png" alt="small button 3" input type="button" value="3" onclick="display.value += '3' " id="button3">  
+    <img src="Items/Checkout/button_small_1.png" alt="small button 1" input type="button" value="1" onclick="display.value += '1', KeyPress7() " id="button1">    
+    <img src="Items/Checkout/button_small_2.png" alt="small button 2" input type="button" value="2" onclick="display.value += '2', KeyPress8() " id="button2">
+    <img src="Items/Checkout/button_small_3.png" alt="small button 3" input type="button" value="3" onclick="display.value += '3', KeyPress9() " id="button3">  
 
-    <img src="Items/Checkout/button_small_0.png" alt="small button 0" input type="button" value="0" onclick="display.value += '0' " id="button0"> 
-    <img src="Items/Checkout/button_small_00.png" alt="small button 00" input type="button" value="00" onclick="display.value += '00' " id="button00"> 
-    <img src="Items/Checkout/button_small_period.png" alt="small button ." input type="button" value="." onclick="display.value += '.' " id="buttonperiod">
+    <img src="Items/Checkout/button_small_0.png" alt="small button 0" input type="button" value="0" onclick="display.value += '0', KeyPress10() " id="button0"> 
+    <img src="Items/Checkout/button_small_00.png" alt="small button 00" input type="button" value="00" onclick="display.value += '00', KeyPress11() " id="button00"> 
+    <img src="Items/Checkout/button_small_period.png" alt="small button ." input type="button" value="." onclick="display.value += '.', KeyPress12() " id="buttonperiod">
     
-    <img src="Items/Checkout/button_small_AC.png" alt="small button AC" input type="button" value="AC" onclick="display.value = ' ' " id="buttonAC"> 
-    <img src="Items/Checkout/button_small_DE.png" alt="small button DE" input type="button" value="DE" onclick="display.value = display.value.toString().slice (0,-1)" id="buttonDE">
+    <img src="Items/Checkout/button_small_AC.png" alt="small button AC" input type="button" value="AC" onclick="display.value = ' ', KeyPress13() " id="buttonAC"> 
+    <img src="Items/Checkout/button_small_DE.png" alt="small button DE" input type="button" value="DE" onclick="display.value = display.value.toString().slice (0,-1), KeyPress14()" id="buttonDE">
     
-    <img src="Items/Checkout/button_small_divide.png" alt="small button divide" input type="button" value="/" onclick="display.value += '/' " id="buttondivide">
-    <img src="Items/Checkout/button_small_plus.png" alt="small button plus" input type="button" value="+" onclick="display.value += '+' " id="buttonplus"> 
-    <img src="Items/Checkout/button_small_minus.png" alt="small button minus" input type="button" value="-" onclick="display.value += '-' " id="buttonminus"> 
-    <img src="Items/Checkout/button_small_multiply.png" alt="small button multiply" input type="button" value="*" onclick="display.value += '*' " id="buttonmultiply"> 
+    <img src="Items/Checkout/button_small_divide.png" alt="small button divide" input type="button" value="/" onclick="display.value += '/', KeyPress15() " id="buttondivide">
+    <img src="Items/Checkout/button_small_plus.png" alt="small button plus" input type="button" value="+" onclick="display.value += '+', KeyPress17() " id="buttonplus"> 
+    <img src="Items/Checkout/button_small_minus.png" alt="small button minus" input type="button" value="-" onclick="display.value += '-', KeyPress18() " id="buttonminus"> 
+    <img src="Items/Checkout/button_small_multiply.png" alt="small button multiply" input type="button" value="*" onclick="display.value += '*', KeyPress16() " id="buttonmultiply"> 
 
-    <img src="Items/Checkout/button_big_equals.png" alt="small button multiply" input type="button" value="=" onclick="display.value = eval(display.value)" id="buttonequals"> 
+    <img src="Items/Checkout/button_big_equals.png" alt="small button multiply" input type="button" value="=" onclick="display.value = eval(display.value), Kaching()" id="buttonequals"> 
 
 </form>
 </div>
@@ -280,10 +280,6 @@ form .display input{
 
 
   <script>
-//trying to use sounds 
-function playAudio(url) {
-  new Audio(url).play();
-}
 
     //Make the DIV element draggagle:
   dragElement(document.getElementById("mydiv"));
@@ -331,6 +327,119 @@ function dragElement(elmnt) {
   }
 }
 
+function KeyPress1(){
+  var audio = new Audio("Key_1.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress2(){
+  var audio = new Audio("Key_2.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress3(){
+  var audio = new Audio("Key_3.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress4(){
+  var audio = new Audio("Key_4.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress5(){
+  var audio = new Audio("Key_5.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress6(){
+  var audio = new Audio("Key_6.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress7(){
+  var audio = new Audio("Key_7.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress8(){
+  var audio = new Audio("Key_8.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress9(){
+  var audio = new Audio("Key_9.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress10(){
+  var audio = new Audio("Key_10.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress11(){
+  var audio = new Audio("Key_11.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress12(){
+  var audio = new Audio("Key_12.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress13(){
+  var audio = new Audio("Key_13.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress14(){
+  var audio = new Audio("Key_14.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress15(){
+  var audio = new Audio("Key_15.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress16(){
+  var audio = new Audio("Key_16.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress17(){
+  var audio = new Audio("Key_17.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function KeyPress18(){
+  var audio = new Audio("Key_18.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function Kaching(){
+  var audio = new Audio("Cashout.mp3");
+  audio.volume = 0.3; // 30%
+  audio.play();
+}
 
 
 
