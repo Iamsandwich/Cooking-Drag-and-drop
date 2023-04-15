@@ -539,7 +539,7 @@ form .display input{
   </div>
 
 <div id="mydiv">
-    <img src="Items/icecream/icecream_decoration_fruit_bananawhole.png" alt="Whole banana">
+    <img src="Items/icecream/icecream_decoration_fruit_bananawhole.png" alt="Whole banana" onmouseup="Banana()">
     </div>
 
 <div id="registerContainer">
@@ -700,11 +700,11 @@ form .display input{
 </div>
 
 <div id="mydiv31">
-<img src="Items/Checkout/Korb_plush_2.png" alt="Korb plushie" >
+<img src="Items/Checkout/Korb_plush_2.png" alt="Korb plushie" onmouseup="Poyo()">
 </div>
 
 <div id="mydiv32">
-<img src="Items/Checkout/Kyoby_Plush.png" alt="Kyoby plushie" >
+<img src="Items/Checkout/Kyoby_Plush.png" alt="Kyoby plushie" onmouseup="PoyoWhisper()">
 </div>
 
 <div id="mydiv33">
@@ -1339,6 +1339,23 @@ function Spray(){
   audio.play();
 }
 
+function Poyo(){
+  var audio = new Audio("Poyo_1.wav");
+  audio.volume = 0.7; // 70%
+  audio.play();
+}
+
+function PoyoWhisper(){
+  var audio = new Audio("Poyo_2.wav");
+  audio.volume = 0.3; // 30%
+  audio.play();
+}
+
+function Banana(){
+  var audio = new Audio("Banana_1.wav");
+  audio.volume = 0.05; // 5%
+  audio.play();
+}
 
 </script>
 
