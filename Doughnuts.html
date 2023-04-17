@@ -314,6 +314,9 @@ background-color: rgb(255, 213, 240);
   top: 1200px;
   z-index: 3;
   text-align: center;
+  transform: translate(0px, 0px);
+  touch-action: none;
+  user-select: none;
 }
 
 #header {
@@ -509,7 +512,7 @@ color: white;
 <img src="Items/Doughnuts/doughnut_hole_chocolate3_empty.png" alt="Empty chocolate doughnut with a hole 3">
 </div>
 
-<div id="mydiv25">
+<div id="mydiv25" class="draggable">
 <img src="Items/Doughnuts/doughnut_box_back.png" alt="Doughnut box back" style="z-index: -10;">
 <img src="Items/Doughnuts/doughnut_box_front.png" alt="Doughnut box front" style="z-index: 10;">
 </div>
@@ -531,11 +534,11 @@ color: white;
 </div>
 
 <div id="mydiv30">
-<img src="Items/Doughnuts/doughnut_sprinkles_rainbow_stars.png" alt="Rainbow Star sprinkles!">
+<img src="Items/Doughnuts/doughnut_sprinkles_rainbow_stars.png" alt="Rainbow Star sprinkles!" class="draggable">
 </div>
 
 <div id="mydiv31">
-<img src="Items/Doughnuts/doughnut_sprinkles_coconut_pink.png" alt="Pink coconut sprinkles">
+<img src="Items/Doughnuts/doughnut_sprinkles_coconut_pink.png" alt="Pink coconut sprinkles" class="draggable">
 </div>
 
 <script>
@@ -727,7 +730,54 @@ function dragElement(elmnt) {
   }
 }
 
+// target elements with the "draggable" class
+interact('.draggable')
+  .draggable({
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: 'parent',
+        endOnly: true
+      })
+    ],
+    // enable autoScroll
+    autoScroll: true,
 
+    listeners: {
+      // call this function on every dragmove event
+      move: dragMoveListener,
+
+      // call this function on every dragend event
+      end (event) {
+        var textEl = event.target.querySelector('p')
+
+        textEl && (textEl.textContent =
+          'moved a distance of ' +
+          (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                     Math.pow(event.pageY - event.y0, 2) | 0))
+            .toFixed(2) + 'px')
+      }
+    }
+  })
+
+function dragMoveListener (event) {
+  var target = event.target
+  // keep the dragged position in the data-x/data-y attributes
+  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+  // translate the element
+  target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+  // update the posiion attributes
+  target.setAttribute('data-x', x)
+  target.setAttribute('data-y', y)
+}
+
+// // this function is used later in the resizing and gesture demos
+// window.dragMoveListener = dragMoveListener
 
 
 </script>

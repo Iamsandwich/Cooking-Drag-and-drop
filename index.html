@@ -36,12 +36,17 @@ background-color: papayawhip;
   left: 2350px;
   z-index: -1;
   text-align: center;
+  touch-action: none;
+  user-select: none;
+  transform: translate(0px, 0px);
 }
 
 #mydiv1 {
   position: absolute;
   z-index: 9;
   text-align: center;
+  touch-action: none;
+  transform: translate(0px, 0px);
 }
 
 #mydiv2 {
@@ -1174,23 +1179,23 @@ color: white;
   <a href=Doughnuts.html><h1 id="doughnutbutton">Click here to make Doughnuts!</h1></a>
 </div>
 
-<div id="mydiv">
-<img src="Items/Doughnuts/doughnut 1.png" alt="purple glaze doughnut">
+<div id="mydiv" class="draggable">
+<img src="Items/Doughnuts/doughnut 1.png" alt="purple glaze doughnut" class="draggable">
 </div>
 
-<div id="mydiv1">
+<div id="mydiv1" class="draggable">
 <img src="Items/icecream/icecream_dollup_Chocodotted.png" alt="Chocolate dotted icecream ball">
 </div>
 
-<div id="mydiv2">
+<div id="mydiv2" class="draggable">
 <img src="Items/icecream/icecream_dollup_mintchoco.png" alt="Mint and chocolate icecream ball">
 </div>
 
-<div id="mydiv3">
+<div id="mydiv3" class="draggable">
 <img src="Items/icecream/icecream_cone.png" alt="icecream cone regular">
 </div>
 
-<div id="mydiv4">
+<div id="mydiv4" class="draggable">
 <img src="Items/icecream/icecream_cone_chocolate.png" alt="icecream cone chocolate">
 </div>
 
@@ -1660,7 +1665,7 @@ color: white;
 
 
 <div id="mydiv121">
-<img src="Items/icecream/backdrop_plate_pinkstars.png" alt="white plate with pink stars">
+<img src="Items/icecream/backdrop_plate_pinkstars.png" alt="white plate with pink stars" class="draggable">
 </div>
 
 <div id="mydiv122">
@@ -1699,7 +1704,7 @@ color: white;
 <img src="Items/icecream/icecream_decoration_caramelballs.png" alt="caramel balls">
 </div>
 
-<div id="mydiv131">
+<div id="mydiv131" class="draggable" draggable="true">
 <img src="Items/icecream/icecream_decoration_whitechocoballs.png" alt="white chocolate balls">
 </div>
 
@@ -1906,6 +1911,102 @@ function dragElement(elmnt) {
 }
 
 
+
+
+
+// function MobileDrag() {
+//   // find the element that you want to drag.
+//   var mydiv = document.getElementById("mydiv");
+  
+//   /* listen to the touchMove event,
+//   every time it fires, grab the location
+//   of touch and assign it to box */
+  
+//   mydiv.addEventListener('touchmove', function(e) {
+//     // grab the location of touch
+//     var touchLocation = e.targetTouches[0];
+    
+//     // assign box new coordinates based on the touch.
+//     mydiv.style.left = touchLocation.pageX + 'px';
+//     mydiv.style.top = touchLocation.pageY + 'px';
+//   })
+  
+//   /* record the position of the touch
+//   when released using touchend event.
+//   This will be the drop position. */
+  
+//   mydiv.addEventListener('touchend', function(e) {
+//     // current box position.
+//     var x = parseInt(mydiv.style.left);
+//     var y = parseInt(mydiv.style.top);
+//   })
+  
+// }
+
+// target elements with the "draggable" class
+interact('.draggable')
+  .draggable({
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: 'parent',
+        endOnly: true
+      })
+    ],
+    // enable autoScroll
+    autoScroll: true,
+
+    listeners: {
+      // call this function on every dragmove event
+      move: dragMoveListener,
+
+      // call this function on every dragend event
+      // end (event) {
+      //   var textEl = event.target.querySelector('p')
+
+      //   textEl && (textEl.textContent =
+      //     'moved a distance of ' +
+      //     (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+      //                Math.pow(event.pageY - event.y0, 2) | 0))
+      //       .toFixed(2) + 'px')
+      // }
+    }
+  }
+  )
+
+
+function dragMoveListener (event) {
+  var target = event.target
+  // keep the dragged position in the data-x/data-y attributes
+  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+  // translate the element
+  target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+  // update the posiion attributes
+  target.setAttribute('data-x', x)
+  target.setAttribute('data-y', y)
+}
+
+// this function is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener
+
+
+
+var el = document.getElementById('mydiv'); 
+
+el.addEventListener("touchstart", handleStart, false);
+el.addEventListener("touchend", handleEnd, false);
+el.addEventListener("touchcancel", handleCancel, false);
+el.addEventListener("touchleave", handleEnd, false);
+el.addEventListener("touchmove", handleMove, false);
+
+function handleStart(event) {
+    // Handle the start of the touch
+}
 
 
 </script>
