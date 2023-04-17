@@ -1668,7 +1668,7 @@ color: white;
 <img src="Items/icecream/backdrop_plate_pinkstars.png" alt="white plate with pink stars" class="draggable">
 </div>
 
-<div id="mydiv122">
+<div id="mydiv122" class="draggable">
 <img src="Items/icecream/backdrop_plate_blue.png" alt="blue plate">
 </div>
 
@@ -1700,11 +1700,11 @@ color: white;
 <img src="Items/icecream/icecream_decoration_cinnamon.png" alt="cinnamon">
 </div>
 
-<div id="mydiv130">
+<div id="mydiv130" >
 <img src="Items/icecream/icecream_decoration_caramelballs.png" alt="caramel balls">
 </div>
 
-<div id="mydiv131" class="draggable" draggable="true">
+<div id="mydiv131">
 <img src="Items/icecream/icecream_decoration_whitechocoballs.png" alt="white chocolate balls">
 </div>
 
@@ -1872,10 +1872,10 @@ function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "mydiv")) {
     /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "mydiv").onmousedown = dragMouseDown;
+    document.getElementById(elmnt.id + "mydiv").onpointerdown = dragMouseDown;
   } else {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
+    elmnt.onpointerdown = dragMouseDown;
   }
 
 
@@ -1885,9 +1885,9 @@ function dragElement(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = e.clientX;
     pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
+    document.onpointerup = closeDragElement;
     // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
+    document.onpointermove = elementDrag;
   }
 
   function elementDrag(e) {
@@ -1905,109 +1905,10 @@ function dragElement(elmnt) {
 
   function closeDragElement() {
     /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
+    document.onpointerup = null;
+    document.onpointermove = null;
   }
 }
-
-
-
-
-
-// function MobileDrag() {
-//   // find the element that you want to drag.
-//   var mydiv = document.getElementById("mydiv");
-  
-//   /* listen to the touchMove event,
-//   every time it fires, grab the location
-//   of touch and assign it to box */
-  
-//   mydiv.addEventListener('touchmove', function(e) {
-//     // grab the location of touch
-//     var touchLocation = e.targetTouches[0];
-    
-//     // assign box new coordinates based on the touch.
-//     mydiv.style.left = touchLocation.pageX + 'px';
-//     mydiv.style.top = touchLocation.pageY + 'px';
-//   })
-  
-//   /* record the position of the touch
-//   when released using touchend event.
-//   This will be the drop position. */
-  
-//   mydiv.addEventListener('touchend', function(e) {
-//     // current box position.
-//     var x = parseInt(mydiv.style.left);
-//     var y = parseInt(mydiv.style.top);
-//   })
-  
-// }
-
-// target elements with the "draggable" class
-interact('.draggable')
-  .draggable({
-    // enable inertial throwing
-    inertia: true,
-    // keep the element within the area of it's parent
-    modifiers: [
-      interact.modifiers.restrictRect({
-        restriction: 'parent',
-        endOnly: true
-      })
-    ],
-    // enable autoScroll
-    autoScroll: true,
-
-    listeners: {
-      // call this function on every dragmove event
-      move: dragMoveListener,
-
-      // call this function on every dragend event
-      // end (event) {
-      //   var textEl = event.target.querySelector('p')
-
-      //   textEl && (textEl.textContent =
-      //     'moved a distance of ' +
-      //     (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
-      //                Math.pow(event.pageY - event.y0, 2) | 0))
-      //       .toFixed(2) + 'px')
-      // }
-    }
-  }
-  )
-
-
-function dragMoveListener (event) {
-  var target = event.target
-  // keep the dragged position in the data-x/data-y attributes
-  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
-
-  // translate the element
-  target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
-
-  // update the posiion attributes
-  target.setAttribute('data-x', x)
-  target.setAttribute('data-y', y)
-}
-
-// this function is used later in the resizing and gesture demos
-window.dragMoveListener = dragMoveListener
-
-
-
-var el = document.getElementById('mydiv'); 
-
-el.addEventListener("touchstart", handleStart, false);
-el.addEventListener("touchend", handleEnd, false);
-el.addEventListener("touchcancel", handleCancel, false);
-el.addEventListener("touchleave", handleEnd, false);
-el.addEventListener("touchmove", handleMove, false);
-
-function handleStart(event) {
-    // Handle the start of the touch
-}
-
 
 </script>
 
