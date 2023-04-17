@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Icecream!</title>
+  <link rel="icon" type="image/x-icon" href="/Items/Doughnuts/doughnut_hole_empty.png">
+</head>
+
+<style>
+
+#body{
+background-color: rgb(255, 213, 240);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 155, 213); 
+  border-radius: 10px;
+}
+
+
+
+#mydiv {
+  position: absolute;
+  left: 10px;
+  top: 200px;
+  z-index: 0;
+  text-align: center;
+}
+
+#mydiv1 {
+  position: absolute;
+  left: 10px;
+  top: 400px;
+  z-index: 0;
+  text-align: center;
+}
+
+#mydiv2 {
+  position: absolute;
+  left: 10px;
+  top: 600px;
+  z-index: 0;
+  text-align: center;
+}
+
+#mydiv3 {
+  position: absolute;
+  left: 10px;
+  top: 800px;
+  z-index: 0;
+  text-align: center;
+}
+
+#mydiv4 {
+  position: absolute;
+  left: 20px;
+  top: 400px;
+  z-index: 1;
+  text-align: center;
+}
+
+#mydiv5 {
+  position: absolute;
+  left: 28px;
+  top: 600px;
+  z-index: 2;
+  text-align: center;
+}
+
+#mydiv6 {
+  position: absolute;
+  left: 30px;
+  top: 200px;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Coloful red drizzle */
+#mydiv7 {
+  position: absolute;
+  left: 30px;
+  top: 407px;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Powdered sugar */
+#mydiv8 {
+  position: absolute;
+  left: 30px;
+  top: 590px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Nuts */
+#mydiv9 {
+  position: absolute;
+  left: 30px;
+  top: 810px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Black currant sprinkles */
+#mydiv10 {
+  position: absolute;
+  left: 30px;
+  top: 200px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Tiny Rainbow sprinkles */
+#mydiv11 {
+  position: absolute;
+  left: 10px;
+  top: 400px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Fancy doughnut */
+#mydiv12 {
+  position: absolute;
+  left: 300px;
+  top: 200px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* Fancy doughnut light */
+#mydiv13 {
+  position: absolute;
+  left: 300px;
+  top: 420px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* Dark chocolate glaze */
+#mydiv14 {
+  position: absolute;
+  left: 25px;
+  top: 800px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Fancy doughnut chocolate 1 */
+#mydiv15 {
+  position: absolute;
+  left: 300px;
+  top: 630px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* Fancy doughnut chocolate 2 */
+#mydiv16 {
+  position: absolute;
+  left: 300px;
+  top: 840px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* Fancy doughnut chocolate and vanilla */
+#mydiv17 {
+  position: absolute;
+  left: 300px;
+  top: 1060px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* chocolate cake doughnut*/
+#mydiv18 {
+  position: absolute;
+  left: 10px;
+  top: 996px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* vanilla cake doughnut*/
+#mydiv19 {
+  position: absolute;
+  left: 10px;
+  top: 1194px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* large sugar sprinkles */
+#mydiv20 {
+  position: absolute;
+  left: 310px;
+  top: 840px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* large red sprinkles */
+#mydiv21 {
+  position: absolute;
+  left: 310px;
+  top: 420px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* thin red glaze */
+#mydiv22 {
+  position: absolute;
+  left: 310px;
+  top: 420px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* thin white glaze */
+#mydiv23 {
+  position: absolute;
+  left: 310px;
+  top: 630px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* chocolate doughnut 3 */
+#mydiv24 {
+  position: absolute;
+  left: 10px;
+  top: 1392px;
+  z-index: 0;
+  text-align: center;
+}
+
+/* doughnut box 1 */
+#mydiv25 {
+  position: absolute;
+  left: 1000px;
+  top: 300px;
+  text-align: center;
+}
+/* doughnut box 1 */
+#mydiv25 img{
+  position: absolute;
+  text-align: center;
+}
+
+/* thin rainbow glaze */
+#mydiv26 {
+  position: absolute;
+  left: 19px;
+  top: 1400px;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Coconut sprinkles */
+#mydiv27 {
+  position: absolute;
+  left: 310px;
+  top: 420px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Dark chocolate sprinkles */
+#mydiv28 {
+  position: absolute;
+  left: 314px;
+  top: 200px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Long rainbow sprinkles */
+#mydiv29 {
+  position: absolute;
+  left: 314px;
+  top: 200px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Rainbow Star sprinkles */
+#mydiv30 {
+  position: absolute;
+  left: 24px;
+  top: 1400px;
+  z-index: 3;
+  text-align: center;
+}
+
+/* Pink coconut sprinkles */
+#mydiv31 {
+  position: absolute;
+  left: 24px;
+  top: 1200px;
+  z-index: 3;
+  text-align: center;
+}
+
+#header {
+  text-align: center;
+  text-transform: uppercase;
+  color: hotpink;
+  background-color: white;
+  border-radius: 40px;
+}
+
+#subtext {
+  text-align: center;
+  color: coral;
+}
+
+#pizzabutton {
+text-align: center;
+width: 20vw;
+border-radius: 100px;
+background-color: white;
+top: 70px;
+font-size: 22px;
+position: absolute;
+}
+
+#pizzabutton:hover {
+background-color:  brown;;
+color: white;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+#cashbutton {
+text-align: center;
+width: 20vw;
+border-radius: 100px;
+background-color: white;
+right: 10px;
+top: 70px;
+font-size: 22px;
+position: absolute;
+color: blueviolet;
+}
+
+#cashbutton:hover {
+background-color:  blueviolet;;
+color: white;
+}
+
+#icecreambutton {
+color: palevioletred;
+text-align: center;
+width: 20vw;
+border-radius: 100px;
+background-color: rgb(255, 255, 255);
+top: 130px;
+font-size: 22px;
+position: absolute;
+}
+
+#icecreambutton:hover {
+background-color: rgb(255, 163, 227);
+color: white;
+}
+
+
+
+
+
+
+</style>
+<body id="body">
+
+
+
+<h1 id="header">Decorate the delicious food!</h1>
+
+<p id="subtext">Click and drag on the items to arrange beautiful treats!</p>
+
+<div id="pizzatime">
+  <a href=Pizza.html><h1 id="pizzabutton">Click here to make Pizza!</h1></a>
+</div>
+
+<div id="cashtime">
+  <a href=checkout.html><h1 id="cashbutton">Click here to pay for your food!</h1></a>
+</div>
+
+<div id="icecreamtime">
+<a href=index.html><h1 id="icecreambutton">Click here to make IceCream!</h1></a>
+</div>
+
+
+<div id="mydiv">
+<img src="Items/Doughnuts/doughnut_hole_empty.png" alt="Empty doughnut with a hole">
+</div>
+
+<div id="mydiv1">
+<img src="Items/Doughnuts/doughnut_hole_chocolate_empty.png" alt="Empty chocolate doughnut with a hole">
+</div>
+
+<div id="mydiv2">
+<img src="Items/Doughnuts/doughnut_hole_chocolate2_empty.png" alt="Empty chocolate doughnut with a hole 2">
+</div>
+
+<div id="mydiv3">
+<img src="Items/Doughnuts/doughnut_empty_caramel.png" alt="Empty caramel doughnut with a hole">
+</div>
+
+<div id="mydiv4">
+<img src="Items/Doughnuts/doughnut_glaze_white.png" alt="Whote glaze">
+</div>
+
+<div id="mydiv5">
+<img src="Items/Doughnuts/doughnut_drizzle_white.png" alt="White drizzle">
+</div>
+
+<div id="mydiv6">
+<img src="Items/Doughnuts/doughnut_drizzle_chocolatedark.png" alt="Dark chocolate drizzle">
+</div>
+
+<div id="mydiv7">
+<img src="Items/Doughnuts/doughnut_drizzle_redcolorful.png" alt="Red colorful drizzle">
+</div>
+
+<div id="mydiv8">
+<img src="Items/Doughnuts/doughnut_sprinkles_sugar.png" alt="Powdered sugar">
+</div>
+
+<div id="mydiv9">
+<img src="Items/Doughnuts/doughnut_sprinkles_nuts.png" alt="Nuts">
+</div>
+
+<div id="mydiv10">
+<img src="Items/Doughnuts/doughnut_sprinkles_blackcurrant.png" alt="Black currant Sprinkles">
+</div>
+
+<div id="mydiv11">
+<img src="Items/Doughnuts/doughnut_sprinkles_tiny_rainbow.png" alt="Tiny Rainbow Sprinkles">
+</div>
+
+<div id="mydiv12">
+<img src="Items/Doughnuts/doughnut_empty_fancy.png" alt="Fancy empty doughnut">
+</div>
+
+<div id="mydiv13">
+<img src="Items/Doughnuts/doughnut_empty_fancy_light.png" alt="Fancy empty light doughnut">
+</div>
+
+<div id="mydiv14">
+<img src="Items/Doughnuts/doughnut_glaze_dark.png" alt="Dark chocolate glaze">
+</div>
+
+<div id="mydiv15">
+<img src="Items/Doughnuts/doughnut_empty_fancy_chocolate1.png" alt="Fancy empty chocolate doughnut 1">
+</div>
+
+<div id="mydiv16">
+<img src="Items/Doughnuts/doughnut_empty_fancy_chocolate2.png" alt="Fancy empty chocolate doughnut 2">
+</div>
+
+<div id="mydiv17">
+<img src="Items/Doughnuts/doughnut_empty_fancy_dualtone_chocovanilla.png" alt="Fancy empty chocolate and vanilla doughnut">
+</div>
+
+<div id="mydiv18">
+<img src="Items/Doughnuts/doughnut_empty_chocolate_cakedough.png" alt="Empty chocolate cake doughnut">
+</div>
+
+<div id="mydiv19">
+<img src="Items/Doughnuts/doughnut_empty_vanilla_cakedough.png" alt="Empty vanilla cake doughnut">
+</div>
+
+<div id="mydiv20">
+<img src="Items/Doughnuts/doughnut_sprinkles_white.png" alt="Large sugar sprinkles">
+</div>
+
+<div id="mydiv21">
+<img src="Items/Doughnuts/doughnut_sprinkles_red.png" alt="Large red sprinkles">
+</div>
+
+<div id="mydiv22">
+<img src="Items/Doughnuts/doughnut_glaze_red_thin.png" alt="Thin red glaze">
+</div>
+
+<div id="mydiv23">
+<img src="Items/Doughnuts/doughnut_glaze_white_thin.png" alt="Thin white glaze">
+</div>
+
+<div id="mydiv24">
+<img src="Items/Doughnuts/doughnut_hole_chocolate3_empty.png" alt="Empty chocolate doughnut with a hole 3">
+</div>
+
+<div id="mydiv25">
+<img src="Items/Doughnuts/doughnut_box_back.png" alt="Doughnut box back" style="z-index: -10;">
+<img src="Items/Doughnuts/doughnut_box_front.png" alt="Doughnut box front" style="z-index: 10;">
+</div>
+
+<div id="mydiv26">
+<img src="Items/Doughnuts/doughnut_glaze_rainbow_thin.png" alt="Thin rainbow glaze!">
+</div>
+
+<div id="mydiv27">
+<img src="Items/Doughnuts/doughnut_sprinkles_coconut.png" alt="Coconut sprinkles">
+</div>
+
+<div id="mydiv28">
+<img src="Items/Doughnuts/doughnut_sprinkles_darkchoco.png" alt="Dark chocolate sprinkles">
+</div>
+
+<div id="mydiv29">
+<img src="Items/Doughnuts/doughnut_sprinkles_long_rainbow.png" alt="Long rainbow sprinkles!">
+</div>
+
+<div id="mydiv30">
+<img src="Items/Doughnuts/doughnut_sprinkles_rainbow_stars.png" alt="Rainbow Star sprinkles!">
+</div>
+
+<div id="mydiv31">
+<img src="Items/Doughnuts/doughnut_sprinkles_coconut_pink.png" alt="Pink coconut sprinkles">
+</div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+dragElement(document.getElementById("mydiv1"));
+dragElement(document.getElementById("mydiv2"));
+dragElement(document.getElementById("mydiv3"));
+dragElement(document.getElementById("mydiv4"));
+dragElement(document.getElementById("mydiv5"));
+dragElement(document.getElementById("mydiv6"));
+dragElement(document.getElementById("mydiv7"));
+dragElement(document.getElementById("mydiv8"));
+dragElement(document.getElementById("mydiv9"));
+dragElement(document.getElementById("mydiv10"));
+dragElement(document.getElementById("mydiv11"));
+dragElement(document.getElementById("mydiv12"));
+dragElement(document.getElementById("mydiv13"));
+dragElement(document.getElementById("mydiv14"));
+dragElement(document.getElementById("mydiv15"));
+dragElement(document.getElementById("mydiv16"));
+dragElement(document.getElementById("mydiv17"));
+dragElement(document.getElementById("mydiv18"));
+dragElement(document.getElementById("mydiv19"));
+dragElement(document.getElementById("mydiv20"));
+dragElement(document.getElementById("mydiv21"));
+dragElement(document.getElementById("mydiv22"));
+dragElement(document.getElementById("mydiv23"));
+dragElement(document.getElementById("mydiv24"));
+dragElement(document.getElementById("mydiv25"));
+dragElement(document.getElementById("mydiv26"));
+dragElement(document.getElementById("mydiv27"));
+dragElement(document.getElementById("mydiv28"));
+dragElement(document.getElementById("mydiv29"));
+dragElement(document.getElementById("mydiv30"));
+dragElement(document.getElementById("mydiv31"));
+dragElement(document.getElementById("mydiv32"));
+dragElement(document.getElementById("mydiv33"));
+dragElement(document.getElementById("mydiv34"));
+dragElement(document.getElementById("mydiv35"));
+dragElement(document.getElementById("mydiv36"));
+dragElement(document.getElementById("mydiv37"));
+dragElement(document.getElementById("mydiv38"));
+dragElement(document.getElementById("mydiv39"));
+dragElement(document.getElementById("mydiv40"));
+dragElement(document.getElementById("mydiv41"));
+dragElement(document.getElementById("mydiv42"));
+dragElement(document.getElementById("mydiv43"));
+dragElement(document.getElementById("mydiv44"));
+dragElement(document.getElementById("mydiv45"));
+dragElement(document.getElementById("mydiv46"));
+dragElement(document.getElementById("mydiv47"));
+dragElement(document.getElementById("mydiv48"));
+dragElement(document.getElementById("mydiv49"));
+dragElement(document.getElementById("mydiv50"));
+dragElement(document.getElementById("mydiv51"));
+dragElement(document.getElementById("mydiv52"));
+dragElement(document.getElementById("mydiv53"));
+dragElement(document.getElementById("mydiv54"));
+dragElement(document.getElementById("mydiv55"));
+dragElement(document.getElementById("mydiv56"));
+dragElement(document.getElementById("mydiv57"));
+dragElement(document.getElementById("mydiv58"));
+dragElement(document.getElementById("mydiv59"));
+dragElement(document.getElementById("mydiv60"));
+dragElement(document.getElementById("mydiv61"));
+dragElement(document.getElementById("mydiv62"));
+dragElement(document.getElementById("mydiv63"));
+dragElement(document.getElementById("mydiv64"));
+dragElement(document.getElementById("mydiv65"));
+dragElement(document.getElementById("mydiv66"));
+dragElement(document.getElementById("mydiv67"));
+dragElement(document.getElementById("mydiv68"));
+dragElement(document.getElementById("mydiv69"));
+dragElement(document.getElementById("mydiv70"));
+dragElement(document.getElementById("mydiv71"));
+dragElement(document.getElementById("mydiv72"));
+dragElement(document.getElementById("mydiv73"));
+dragElement(document.getElementById("mydiv74"));
+dragElement(document.getElementById("mydiv75"));
+dragElement(document.getElementById("mydiv76"));
+dragElement(document.getElementById("mydiv77"));
+dragElement(document.getElementById("mydiv78"));
+dragElement(document.getElementById("mydiv79"));
+dragElement(document.getElementById("mydiv80"));
+dragElement(document.getElementById("mydiv81"));
+dragElement(document.getElementById("mydiv82"));
+dragElement(document.getElementById("mydiv83"));
+dragElement(document.getElementById("mydiv84"));
+dragElement(document.getElementById("mydiv85"));
+dragElement(document.getElementById("mydiv86"));
+dragElement(document.getElementById("mydiv87"));
+dragElement(document.getElementById("mydiv88"));
+dragElement(document.getElementById("mydiv89"));
+dragElement(document.getElementById("mydiv90"));
+dragElement(document.getElementById("mydiv91"));
+dragElement(document.getElementById("mydiv92"));
+dragElement(document.getElementById("mydiv93"));
+dragElement(document.getElementById("mydiv94"));
+dragElement(document.getElementById("mydiv95"));
+dragElement(document.getElementById("mydiv96"));
+dragElement(document.getElementById("mydiv97"));
+dragElement(document.getElementById("mydiv98"));
+dragElement(document.getElementById("mydiv99"));
+dragElement(document.getElementById("mydiv100"));
+dragElement(document.getElementById("mydiv101"));
+dragElement(document.getElementById("mydiv102"));
+dragElement(document.getElementById("mydiv103"));
+dragElement(document.getElementById("mydiv104"));
+dragElement(document.getElementById("mydiv105"));
+dragElement(document.getElementById("mydiv106"));
+dragElement(document.getElementById("mydiv107"));
+dragElement(document.getElementById("mydiv108"));
+dragElement(document.getElementById("mydiv109"));
+dragElement(document.getElementById("mydiv110"));
+dragElement(document.getElementById("mydiv111"));
+dragElement(document.getElementById("mydiv112"));
+dragElement(document.getElementById("mydiv113"));
+dragElement(document.getElementById("mydiv114"));
+dragElement(document.getElementById("mydiv115"));
+dragElement(document.getElementById("mydiv116"));
+dragElement(document.getElementById("mydiv117"));
+dragElement(document.getElementById("mydiv118"));
+dragElement(document.getElementById("mydiv119"));
+dragElement(document.getElementById("mydiv120"));
+dragElement(document.getElementById("mydiv121"));
+dragElement(document.getElementById("mydiv122"));
+dragElement(document.getElementById("mydiv123"));
+dragElement(document.getElementById("mydiv124"));
+dragElement(document.getElementById("mydiv125"));
+dragElement(document.getElementById("mydiv126"));
+dragElement(document.getElementById("mydiv127"));
+dragElement(document.getElementById("mydiv128"));
+dragElement(document.getElementById("mydiv129"));
+dragElement(document.getElementById("mydiv130"));
+dragElement(document.getElementById("mydiv131"));
+dragElement(document.getElementById("mydiv132"));
+dragElement(document.getElementById("mydiv133"));
+dragElement(document.getElementById("mydiv134"));
+dragElement(document.getElementById("mydiv135"));
+dragElement(document.getElementById("mydiv136"));
+dragElement(document.getElementById("mydiv137"));
+dragElement(document.getElementById("mydiv138"));
+dragElement(document.getElementById("mydiv139"));
+dragElement(document.getElementById("mydiv140"));
+
+
+
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "mydiv")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "mydiv").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+
+
+
+</script>
+
+</body>
+</html>
